@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "analytic_ops": true,
+  "strict_checkpoint_load": true,
+  "checkpoint_tensors": 642,
+  "checkpoint_sha256": "e7f57309da0536d4bb6c4cdf15ab53256790cf4486c6eef59cb8698a9c33bc43",
+  "synthetic_inference": true,
+  "synthetic_hand_count": 0,
+  "synthetic_object_count": 0,
+  "device": "cpu",
+  "network_downloads": 0,
+  "real_dataset_accuracy_evaluated": false,
+  "environment_note": "Local check reused existing dependency directories and emitted a macOS duplicate FFmpeg library warning. It exited successfully. Install a clean dedicated environment following README for collaborator use."
+}

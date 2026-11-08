@@ -1,0 +1,13 @@
+Config.local.xcconfig
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.build/
+.swiftpm/
+SourcePackages/
+tests/.artifacts/
+tests/__pycache__/
+*.mobileprovision
+*.p12
+*.p8
+.DS_Store

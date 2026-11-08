@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "standard_library_audit_tests": 7,
+  "pyav_export_tests": 6,
+  "synthetic_export": {
+    "duration_seconds": 4,
+    "video_frames": 28,
+    "video_pts_preserved": true,
+    "audio_offset_seconds": 0.3,
+    "speech_used": false,
+    "source_metadata_sentinel_excluded": true
+  },
+  "existing_local_session_validation": {
+    "sessions": 3,
+    "video_frames": [
+      780,
+      667,
+      623
+    ],
+    "motion_rows": [
+      6314,
+      2859,
+      2897
+    ],
+    "all_structural_checks_passed": true,
+    "raw_data_included": false
+  },
+  "limitations": [
+    "Structural validity is not continuity, accuracy or physical synchronization.",
+    "Export includes all speech in real input; no automatic anonymization."
+  ]
+}

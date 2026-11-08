@@ -1,0 +1,1 @@
+ffmpeg default CFR output duplicated a frame at source timestamp gaps; the extractor's frame/PTS count check rejected 605/1522 windows, leaving a biased sample (positives lost more). Fixed with -fps_mode passthrough (code/04_train_v2_passthrough). Do not use these numbers; weights intentionally not included.

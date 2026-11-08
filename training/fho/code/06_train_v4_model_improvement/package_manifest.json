@@ -1,0 +1,57 @@
+{
+  "schema": "robomemo-fho-transfer-v1-train-package",
+  "package_version": "v4-model-improvement",
+  "files": [
+    {
+      "path": "common.py",
+      "sha256": "3c2551cc50050a95cbc141dcc9c95b51c709634fe3471ad3c32a037c9665085a",
+      "bytes": 3041
+    },
+    {
+      "path": "extract_windows.py",
+      "sha256": "94bc4fc3ad132842596ff0e7c954050a0a3b1c3cb2a4d3daefec57b686756e74",
+      "bytes": 5138
+    },
+    {
+      "path": "metrics_lib.py",
+      "sha256": "f8ada9b6f7e5e1005a64125e26795518741898a0b46e590f360e8827d40671b3",
+      "bytes": 11283
+    },
+    {
+      "path": "make_features_v4.py",
+      "sha256": "d6aaf7d51cdc34d35d7db2b35916eca7985036f9d7a67d3f3f2deacc63f32204",
+      "bytes": 4444
+    },
+    {
+      "path": "train_eval_v4.py",
+      "sha256": "ddce0efa3f30a6132cfc5a56eeec3f0a0adbdc2be527c14a032d2d628c5de9e4",
+      "bytes": 4001
+    },
+    {
+      "path": "finetune.py",
+      "sha256": "dcbe9dcd967064f866e51b9e769434b140d637681489eec239ce610f95fe112d",
+      "bytes": 9195
+    },
+    {
+      "path": "compare_v4.py",
+      "sha256": "206fb41e60cd0a91f60474c3aa3051ea0fab967677f8176f592a792dbaca03d2",
+      "bytes": 3951
+    },
+    {
+      "path": "run_pipeline_v4.py",
+      "sha256": "998798b3301f3ac124747cedbeec542a6d4e283d4ec1a0d5e757e8507f5bb359",
+      "bytes": 5721
+    },
+    {
+      "path": "RoboMemo_train_v4.ps1",
+      "sha256": "c72587c856c317ce8bfd0ce8b45db4617e99cae0196a009b01a891f33584de8e",
+      "bytes": 1418
+    },
+    {
+      "path": "先看这里.txt",
+      "sha256": "4eecab764b3edf8779190c9965cb2324ae65ec436aaba9909ad3a4f9ea601350",
+      "bytes": 740
+    }
+  ],
+  "sanitized_for_sharing": "Explicit collaborator-supplied project/annotation paths; no owner-specific environment paths; manifest regenerated."
+}

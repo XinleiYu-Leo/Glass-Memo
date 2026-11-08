@@ -1,0 +1,41 @@
+{
+  "schema": "robomemo-candidate-export-package-v2",
+  "files": [
+    {
+      "path": "RoboMemo_export_candidates_v2.ps1",
+      "sha256": "a79cd17128706cceec471e98e6d935322f0689262f7fb42897e7ee02220d3f4b",
+      "bytes": 1454
+    },
+    {
+      "path": "run_export_v2.py",
+      "sha256": "dd3bc6eda15300ef6e90207a0adcedece7b238c70d70154e6e796bfdaed1de46",
+      "bytes": 2907
+    },
+    {
+      "path": "export_candidates_v2.py",
+      "sha256": "192c0636ba769a5146d962d5d9dac70d4bbc158850fc2b155b0777d5efcf4b1c",
+      "bytes": 7607
+    },
+    {
+      "path": "export_candidates_v1.py",
+      "sha256": "64d56e0749dd3c8a37f4bd5d0a48164a34344dd629d0e4bfc8be6d8c9ad4da58",
+      "bytes": 9224
+    },
+    {
+      "path": "audit_annotations.py",
+      "sha256": "9ed3455dcf31a8bb076625467425b5b1226d60417c8a3f4a3ac903b1f41e03c7",
+      "bytes": 31822
+    },
+    {
+      "path": "protocol/exclusion_policy.json",
+      "sha256": "02250507b503e570b346c7802ea98fc6ad8dd75043b1ad05e0b2c251a398a5f4",
+      "bytes": 150732
+    },
+    {
+      "path": "先看这里.txt",
+      "sha256": "38f149e58b5034b781936926816a2cb824556d5d5f60f339f9b1b85c29d6b28a",
+      "bytes": 382
+    }
+  ],
+  "sanitized_for_sharing": "Explicit collaborator-supplied project/annotation paths; no owner-specific environment paths; manifest regenerated."
+}

@@ -1,0 +1,455 @@
+{
+  "schema": "robomemo-local-model-registry-v1",
+  "purpose": "Optional local artifacts; do not commit binaries or upload without confirming applicable training-data/model terms.",
+  "default_install": "models/local",
+  "model_files": [
+    {
+      "path": "fho/models/finetune_mobilenet_n1652_seed0/config.json",
+      "bytes": 3766,
+      "sha256": "1bbd8dc80f8221539d2b6ed167c7884350582988a6dab7b03f2e26fa7a0e5efb",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/finetune_mobilenet_n1652_seed0/finetune_n_full_seed0.pt",
+      "bytes": 5032923,
+      "sha256": "7ebc49f63201c8c25926b67a10b478be4f2392882450a7e0d4177fd77d075b20",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_last/config.json",
+      "bytes": 1939,
+      "sha256": "eebc5efec9d911c5c1850e37d77b08d70de5a7ed5af2d064d5405ce40f792458",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_last/stats.npz",
+      "bytes": 19438,
+      "sha256": "ef2bcd89378edc543c4191a6f493aec94974717d35daadf492fca49f0bc6142e",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_last/verification.json",
+      "bytes": 191,
+      "sha256": "ae4d78946ad62386f96e0501e4cbe880eae89a11be4bab0ba16aed86e6d9918e",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_last/weights.npz",
+      "bytes": 5134,
+      "sha256": "d46dedda1f5104286c3b060ebd0c64edc14bfb0afe7b6f7d942ff0d6a848e797",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool10/config.json",
+      "bytes": 1941,
+      "sha256": "2d993ef03cc0c339f01bb64de9c1737e50f6e75a525ae4c3a4fab179163b7fff",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "10b0dcf1745443762dc0426b378f72c6ca2a54b911c40100a72efc5dc7cfb7fc",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool10/verification.json",
+      "bytes": 191,
+      "sha256": "d2d823f6a7bf7e981d223e47dc1cf65516397b34cf9a26c2e6d1942a6b18ee95",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool10/weights.npz",
+      "bytes": 18958,
+      "sha256": "5ba87a99c9158af6edc24f47584067c594668bd2fa540e70f7dadf907100073e",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool4/config.json",
+      "bytes": 1940,
+      "sha256": "e3dd7b7a8aefef0ec94fd12bca872af87ca3725208fab2a18d68f47056c0cd78",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "7a3ca0ebc485fc566ec4874110c90ce5d1be35070bc3ca65759e8ccc4825f4f8",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool4/verification.json",
+      "bytes": 190,
+      "sha256": "8e183637ed1fabb1ee5465df7a47b5a396fd736bec1714f3ad20e814349b1ea8",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1000_logistic_pool4/weights.npz",
+      "bytes": 18958,
+      "sha256": "f848624af7491243c85abdcf5f1f424df66f6be192545e93afc1e8607a7fea9f",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_last/config.json",
+      "bytes": 1936,
+      "sha256": "b6f037b33ba83a3393311979e376495fea304288ae1589c27c845e5c3eae3a51",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_last/stats.npz",
+      "bytes": 19438,
+      "sha256": "282bf533f16460588c747df83112b0b48a0cab5729d200ae5e25d4772e9557e2",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_last/verification.json",
+      "bytes": 191,
+      "sha256": "48ae42019d52ae4ee518925d154969cd8696c36482c0f7cd3294c98d95965bc7",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_last/weights.npz",
+      "bytes": 5134,
+      "sha256": "cc1636b32c9ede6390a94dc9500514a459e4b7e4262f7163a5f583ce11f7ef2c",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool10/config.json",
+      "bytes": 1943,
+      "sha256": "fdebece348e0463977dee934b69ddf9a887a45fc8438f3d5c2999afbbec58647",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "d74cab58f64efc5aac9db48fa11f734bce6d07a5cca918f4a8bc50efcc32b049",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool10/verification.json",
+      "bytes": 191,
+      "sha256": "d6c7b8b52da8e207e03cd4ea70f93e3749fe002fed068c91f6023f066422c506",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool10/weights.npz",
+      "bytes": 18958,
+      "sha256": "bba09dab954f3017d7b162db1f51a29fd479106d68ea7f15dc52f50166005dc7",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool4/config.json",
+      "bytes": 1939,
+      "sha256": "2df84387b4ddd8b63c04a6864087745b24284be04ef0d8334990b49c83b7f6e8",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "0679982a0ad32bd0660ce262b0f962bcd77d0e50aa255ed6c4561734500779f6",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool4/verification.json",
+      "bytes": 191,
+      "sha256": "eaab3e1695e31fc06318f8dd66533976cdaddf1e823681053ac1d0404b518d40",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n1652_logistic_pool4/weights.npz",
+      "bytes": 18958,
+      "sha256": "4717ce1599df5b5aee70d78a8466707032f6ee5b3d6df119df2bfb78fdd22ae3",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_last/config.json",
+      "bytes": 1934,
+      "sha256": "cbe34883b6cebb7f74c173adb3d38cab1046b4d3b81d4dde47006c8800f33a82",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_last/stats.npz",
+      "bytes": 19438,
+      "sha256": "6e122fcae8a40f816019eab49223dca5013e20d6d8f55ed39375a0c04aee71b9",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_last/verification.json",
+      "bytes": 191,
+      "sha256": "9bf4206e83645f45e1dc7add614496de1b29f91951239025767e98af562edf04",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_last/weights.npz",
+      "bytes": 5134,
+      "sha256": "5a2a821407cfd97701af2756d833c7be4742e7e6e1f15815ccaf2c173074987f",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool10/config.json",
+      "bytes": 1922,
+      "sha256": "bacb028b84431b1d6649fa412c52f2929ce38e6e73a4cfdb25e5e4ece7d3360c",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "bed1b03f5ff1817ac4bea3ffdade728c993ab6a8e0ae997f231398dc6c3389e3",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool10/verification.json",
+      "bytes": 191,
+      "sha256": "f35d6504916fa9845b886b140ae8b72650c787eabf307b06bd8dee454e8c18aa",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool10/weights.npz",
+      "bytes": 18958,
+      "sha256": "48c11451b7ac73ce580916741af69a1978ef3960ce2f1beb3a86c3790d30b738",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool4/config.json",
+      "bytes": 1923,
+      "sha256": "cd881259c057f8092b5740ce1e3c0cbf28ad0548114d3bc689d3f0676a5295e3",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "97406aef159cde6881b47d3d19f1826e692f49731a6c95f7e843bf67f972bd42",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool4/verification.json",
+      "bytes": 191,
+      "sha256": "9fcf3285fce475c6c387a31dbaca49dadc476a2075e2bbd200cd64776308bc78",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n200_logistic_pool4/weights.npz",
+      "bytes": 18958,
+      "sha256": "4b3e5281ce408290d042d01e70b355f5ee9ab24cbbdc8db34590d581a3a1171b",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_last/config.json",
+      "bytes": 1934,
+      "sha256": "52436262fa46069ccd05278551824f268dcae49bed819d7407711848e34d2040",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_last/stats.npz",
+      "bytes": 19438,
+      "sha256": "685c17cb5186022d48113f6c55edc34ad69a3ad0837880528ebc53342f9bae61",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_last/verification.json",
+      "bytes": 191,
+      "sha256": "fafd601a659615e5bd098d447d102fb8268172962f80c310979b5741e6324e8b",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_last/weights.npz",
+      "bytes": 5134,
+      "sha256": "a9c68c7aa3584c36f115b12f47d99e98a4130cca5d1cc0400d99b688c0a04be2",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool10/config.json",
+      "bytes": 1941,
+      "sha256": "f80a32160e5b1526e72005c975437bbaa7535ba40d2d68ce732871f1331bf232",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "f6128a7b52b4e718e89c26fc8e2f6b3ba0eb2a6422961d6e47309a96810fe8de",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool10/verification.json",
+      "bytes": 189,
+      "sha256": "ac8eaea2ac827b927b6c242c78fb254c2e7689d4b3e1e3e0c18d7c82630a7c2f",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool10/weights.npz",
+      "bytes": 18958,
+      "sha256": "41395478dfa0236b20f072f7dff2e2be6aac32653d72498ef8691a6aa5986880",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool4/config.json",
+      "bytes": 1938,
+      "sha256": "806089ec295ab8e18b355d8595824ab39a7b0c46622c8a2396605f179af7e94f",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "8d3466b2a4d9505cae43ec4ecde843b822119609503bfe4cacf0e831786cf30b",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool4/verification.json",
+      "bytes": 191,
+      "sha256": "fa41be563d3257640434e251c57e61b861045bb74b9cd556430cf5b3f06adfe8",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/logistic/n500_logistic_pool4/weights.npz",
+      "bytes": 18958,
+      "sha256": "3158672f537724cc117de7efe46e50fd193d2daa5381efd4c511f6982fc94647",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool10/config.json",
+      "bytes": 2613,
+      "sha256": "6a73d33b0f4c2eec77c09c0c0a6745f2c1866386e03fa9c7d3a16e113bb3e5bd",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "10b0dcf1745443762dc0426b378f72c6ca2a54b911c40100a72efc5dc7cfb7fc",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool10/verification.json",
+      "bytes": 259,
+      "sha256": "10fa6f8a8cbee03484a42f32c2203caff21df63953a2370f74c4610fa9496527",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool10/weights.npz",
+      "bytes": 3545062,
+      "sha256": "e75adf3be2bdd35df0a69ba5120e00c04159230682451f1e4cf11c1ff96f350d",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool4/config.json",
+      "bytes": 2505,
+      "sha256": "64493e12e84d072b21a74e6893d4338f4ac2ed06140ecfd262f211f1e5127764",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "7a3ca0ebc485fc566ec4874110c90ce5d1be35070bc3ca65759e8ccc4825f4f8",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool4/verification.json",
+      "bytes": 257,
+      "sha256": "5e8c45ecb8e53a2f44ed449976bc930514fd90ccc1fdc02be34da1e34ef7b1df",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1000_mlp_pool4/weights.npz",
+      "bytes": 3545062,
+      "sha256": "d2b8c588c3c30fbbb3064d8df2a837a0d356dae8e7c97bd39df3148028d0246b",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1652_mlp_pool4/config.json",
+      "bytes": 2462,
+      "sha256": "19ca02d676556c980cd64a2927716357d1f94deb931c414bf863d016a1db2007",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1652_mlp_pool4/stats.npz",
+      "bytes": 47086,
+      "sha256": "0679982a0ad32bd0660ce262b0f962bcd77d0e50aa255ed6c4561734500779f6",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1652_mlp_pool4/verification.json",
+      "bytes": 257,
+      "sha256": "cb6c45e0a2297ea131c8e68463e143dd829ebd773b68c3c10d232a59626af525",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/n1652_mlp_pool4/weights.npz",
+      "bytes": 3545062,
+      "sha256": "69b1800f4a58c0373338d7d34fae3c561673749200014c1bda173559c9827e87",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/vision_main_n1652_mlp_pool10/config.json",
+      "bytes": 2560,
+      "sha256": "243c5df96c2702dfc1b461e7b16521378e62661498a55f3bd1c13aa6174886a7",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/vision_main_n1652_mlp_pool10/stats.npz",
+      "bytes": 47086,
+      "sha256": "d74cab58f64efc5aac9db48fa11f734bce6d07a5cca918f4a8bc50efcc32b049",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/vision_main_n1652_mlp_pool10/verification.json",
+      "bytes": 259,
+      "sha256": "7b1a6ccb46c59458d459a5cfd3fdbf7e9de22ccb10a9ab553d6b93ccf48effd2",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/models/vision_main_n1652_mlp_pool10/weights.npz",
+      "bytes": 3545062,
+      "sha256": "cb1fb019bd9b24faf77ce6ec5852eb0cebdd48649e24afbf8a7ce1079a34a677",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/raw_head_weights/head_weights_run_20261027_193623.npz",
+      "bytes": 7220578,
+      "sha256": "72f8d5cdd947b89970b0d128d63a3b01af2e47eab304f87b77c04162c66e729a",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "fho/raw_head_weights/head_weights_run_20261027_200303.npz",
+      "bytes": 7263766,
+      "sha256": "8031d1d8558a8839586be3c7db1b7cefa71650aee020d5e5b4077a18efb59b83",
+      "provenance": "saved FHO run export; see adjacent config.json and raw_head_weights"
+    },
+    {
+      "path": "historical/historical_reviewed_v2.pt",
+      "bytes": 5019535,
+      "sha256": "6c80dd106518f165331e7ba662ef33279d672265c6384c0f35c108a1489cb0d7",
+      "provenance": "historical reviewed-v2 checkpoint"
+    }
+  ],
+  "not_saved": [
+    "v4 frame-difference heads",
+    "v5 audio/fusion heads",
+    "fine-tune seeds 1 and 2; n1000 seed0",
+    "MLP n200/n500; n1000 v3 MLP (n1000 v2 saved separately)"
+  ],
+  "external_pretrained": [
+    {
+      "schema": "100doh-share-provenance-v1",
+      "model": "100DOH handobj_100K",
+      "variant": "100K-only, not +ego",
+      "upstream_repository": "https://github.com/ddshan/hand_object_detector",
+      "upstream_commit": "e6eec712a498ec7844b97893c8d012cea1a71e09",
+      "source_subset_modified": false,
+      "license_file": "vendor/hand_object_detector/LICENSE",
+      "checkpoint_relative_path": "checkpoints/faster_rcnn_1_8_89999.pth",
+      "checkpoint_bytes": 378147662,
+      "checkpoint_sha256": "e7f57309da0536d4bb6c4cdf15ab53256790cf4486c6eef59cb8698a9c33bc43",
+      "mirror_url": "https://media.githubusercontent.com/media/ImperialCollegeLondon/MessagePassingFramework/825297bb9c8a20426ade07d3ab5b3310ed0a6210/tas_perception/hand_object/models/faster_rcnn_1_8_89999.pth",
+      "mirror_commit": "825297bb9c8a20426ade07d3ab5b3310ed0a6210",
+      "mirror_lfs_digest_verified": true,
+      "original_author_independent_digest_available": false,
+      "legacy_cuda_numerical_equivalence_verified": false,
+      "completion_predictor": false,
+      "contains_source_media": false
+    },
+    {
+      "name": "MobileNetV3-Small IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+      "bytes": 10306551,
+      "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "included_binary": false
+    }
+  ]
+}

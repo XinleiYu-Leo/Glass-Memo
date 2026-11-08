@@ -1,0 +1,12 @@
+{
+  "eval_windows": 331,
+  "unit": "canonical_parent bootstrap, 2000 resamples, seed 11, same eval windows for both methods",
+  "mlp_scores": "mean of 3 seeds",
+  "results": [
+    {"a": "mlp 10 frames, n=1000", "b": "pixel motion", "ap_diff": 0.053, "ci95": [-0.010, 0.112], "p_diff_le_0": 0.052},
+    {"a": "mlp 10 frames, n=1000", "b": "mlp 10 frames, n=200", "ap_diff": 0.055, "ci95": [0.000, 0.106], "p_diff_le_0": 0.025},
+    {"a": "mlp 10 frames, n=1000", "b": "mlp 10 frames, n=500", "ap_diff": 0.025, "ci95": [-0.017, 0.064], "p_diff_le_0": 0.127},
+    {"a": "mlp 10 frames, n=1000", "b": "mlp 4 frames, n=1000", "ap_diff": 0.041, "ci95": [0.009, 0.071], "p_diff_le_0": 0.003},
+    {"a": "mlp 10 frames, n=1000", "b": "logistic last frame only, n=1000", "ap_diff": 0.187, "ci95": [0.123, 0.239], "p_diff_le_0": 0.000}
+  ]
+}

@@ -1,0 +1,9 @@
+RoboMemo：导出可用标注明细（只读）
+
+作用：按上一轮盘点完全相同的排除规则，把可用于新训练的 FHO 动作逐条导出
+（含 PRE/PNR/POST 关键帧和时间），供下一步挑选训练片段。
+不下载视频、不上传、不训练，不修改任何原文件。自由文本叙述不会被导出。
+
+运行：在 Downloads 解压后运行 RoboMemo_export_candidates.ps1（聊天中有可复制命令）。
+结果：<PROJECT>\candidate_exports\export_*\RoboMemo_candidates_return.zip
+即使显示 export_needs_attention，也把生成的 ZIP 发回。

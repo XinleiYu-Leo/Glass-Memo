@@ -1,0 +1,30 @@
+{
+  "schema": "robomemo-training-handoff-checks-v1",
+  "status": "passed",
+  "python_syntax_files": 77,
+  "stage_manifest_entries": 53,
+  "model_registry_artifacts": 69,
+  "registry_bytes": 39572491,
+  "frozen_heads_checked": 16,
+  "actual_pretrained_encoder_on_synthetic_frames": "passed",
+  "historical_checkpoint_synthetic_inference": "passed",
+  "finetuned_checkpoint_synthetic_inference": "passed",
+  "historical_unit_tests": {
+    "annotation_inventory": 9,
+    "source_preparation": 8,
+    "trainer": 19
+  },
+  "installer": {
+    "verified_all_hashes": true,
+    "copied_all_files_in_temporary_destination": true,
+    "refused_changed_destination": true
+  },
+  "real_dataset_training_or_evaluation_rerun": false,
+  "network_downloads": 0,
+  "limitations": [
+    "Tests use synthetic inputs; they do not validate task accuracy.",
+    "Historical trainer tests optimize tiny synthetic fixtures only; no original model or dataset is changed.",
+    "No CUDA or Windows execution performed during this handoff.",
+    "Documentation commands for full authorized dataset regeneration are not re-executed on source data."
+  ]
+}

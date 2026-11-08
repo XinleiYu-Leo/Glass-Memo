@@ -1,0 +1,42 @@
+{
+  "schema": "robomemo-fho-transfer-v1-train-package",
+  "package_version": "v2-passthrough",
+  "files": [
+    {
+      "path": "common.py",
+      "sha256": "350a780b4d5360f6f696d154471880948c5eddbdba201894e31ce63581652271",
+      "bytes": 2208
+    },
+    {
+      "path": "extract_windows.py",
+      "sha256": "49f0a1d3664fc528846c3f50b03a18675b1e56e0d27f5d4b58bd94597d1e5939",
+      "bytes": 5138
+    },
+    {
+      "path": "make_features.py",
+      "sha256": "aacb5e88da3aa742f6adf5c5683babe42072e505e9f230e346232a174d18fa33",
+      "bytes": 4235
+    },
+    {
+      "path": "train_eval.py",
+      "sha256": "c58a0a6afbd994bc6986ac0c2981d51c0ed7b42bdf72e49fbcbac5dfb0633dc9",
+      "bytes": 10583
+    },
+    {
+      "path": "run_pipeline.py",
+      "sha256": "01f404ac695e69e3213cace9530a1826b5ddc632a48f3713f959c53dda3d7243",
+      "bytes": 6192
+    },
+    {
+      "path": "RoboMemo_train_fho_transfer_v1.ps1",
+      "sha256": "7ee8eb4c169009785cb9f7d762c8bc9cedd6abee6a2e64ceedf8babf7de4e3a4",
+      "bytes": 1416
+    },
+    {
+      "path": "先看这里.txt",
+      "sha256": "37eb007a5cfdb85312530d5953b2c0304d05dd4c24fc48196e26dbb384ee1b9b",
+      "bytes": 914
+    }
+  ],
+  "sanitized_for_sharing": "Explicit collaborator-supplied project/annotation paths; no owner-specific environment paths; manifest regenerated."
+}

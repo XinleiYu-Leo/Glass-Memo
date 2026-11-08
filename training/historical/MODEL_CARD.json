@@ -1,0 +1,49 @@
+{
+  "schema": "robomemo-historical-model-card-v1",
+  "export_date": "2026-10-30",
+  "model_experiment_date": "2026-10-24",
+  "latest_FHO_tenframe_weights_included": false,
+  "name": "historical_reviewed_v2_four_frame",
+  "checkpoint_file": "models/historical_reviewed_v2.pt",
+  "checkpoint_sha256": "6c80dd106518f165331e7ba662ef33279d672265c6384c0f35c108a1489cb0d7",
+  "checkpoint_bytes_preserved": true,
+  "metadata_audit": "All keys allowlisted; no names, accounts, device IDs, absolute paths, sample identities or histories present. No redaction was needed.",
+  "encoder_tensor_sha256": "1b840629850e56624db48033d9aecf2cc454aa721fd7ef33732fc5050cde1213",
+  "head_tensor_sha256": "e7efa1a221f5abf8c0e2408ba057b2274907c5f386983377400539aa19c3604e",
+  "architecture": {
+    "encoder": "MobileNetV3-Small ImageNet1K-V1 frozen",
+    "frames": 4,
+    "offsets_seconds": [
+      -1.5,
+      -1.0,
+      -0.5,
+      0.0
+    ],
+    "feature_dimension": 576,
+    "temporal_recipe": "train-standardized chronological concatenation",
+    "head_hidden_units": 128,
+    "threshold": 0.5
+  },
+  "historical_dev_only": {
+    "tp": 2,
+    "fp": 11,
+    "fn": 0,
+    "tn": 4,
+    "f1": 0.26666666666666666,
+    "balanced_accuracy": 0.6333333333333333,
+    "used_for_checkpoint_selection": true,
+    "independent_test": false
+  },
+  "separate_imagenet_initialization": {
+    "file": "models/mobilenet_v3_small_imagenet1k_v1.pth",
+    "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "tensor_only": true,
+    "source_url": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth"
+  },
+  "limitations": [
+    "Historical four-frame model, not latest ten-frame FHO result.",
+    "Weak-label development-selected model; no demonstrated deployment or object-finding benefit.",
+    "Exact historical dataset media are not included."
+  ],
+  "latest_FHO_sibling_package": "../latest_fho"
+}

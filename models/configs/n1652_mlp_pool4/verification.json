@@ -1,0 +1,9 @@
+{
+ "check": "apply_heads.py on the run's own eval features vs recorded eval_predictions.csv (rounded to 1e-6)",
+ "max_abs_diff": {
+  "seed0": 4.98810859284049e-07,
+  "seed1": 4.98250302495562e-07,
+  "seed2": 4.989290870449636e-07
+ },
+ "eval_windows": 413
+}

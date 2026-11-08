@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "finetune_mobilenet_n1652_seed0",
+  "weights_only_load": true,
+  "strict_state_load": true,
+  "tensor_count": 246,
+  "synthetic_inference": true,
+  "network_calls": 0,
+  "real_evaluation_replayed": false
+}

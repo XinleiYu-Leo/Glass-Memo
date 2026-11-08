@@ -1,0 +1,7 @@
+RoboMemo fho_transfer_v1 · 模型改进轮（v4）
+
+需要：<PROJECT>\fho_transfer_v1\selection_v2、downloads\v2\clips（523 个）、frames_v2（已抽好的帧，直接复用）。
+A：把相邻两帧的差做成"运动图"，和原画面一起交给同一个冻结的 MobileNet，再训练小头（几分钟）。
+B：在显卡上让 MobileNet 最后几层也参与训练（先跑 1 轮冒烟测试，通过才跑正式：1652 段 3 个种子 + 1000 段 1 个种子）。
+所有方法用同一套开发/检查集、同一套打分代码比较；超参事先固定；不下载、不上传、不调用 API。
+回传：runs\run_v4_*\RoboMemo_fho_transfer_v1_results_v4.zip（只含数字、日志和一个约 10 MB 的模型文件）。

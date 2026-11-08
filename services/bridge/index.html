@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RoboMemo · Connect</title><link rel="stylesheet" href="/style.css"><script src="/dashboard.js" defer></script></head>
+<body><main>
+  <header><span class="eyebrow">ROBOMEMO / LOCAL PROTOTYPE</span><h1>Give your photos<br>and videos context.</h1><p>Connect your own supported account on this computer. Analyze photos or short videos from your iPhone, then read the English result on your glasses.</p></header>
+  <p id="notice" class="notice" role="status">Loading connection…</p>
+  <section><span class="step">01</span><h2>Connect your own account</h2><p>This source includes a prototype account sign-in flow. Use your own account and verify current service eligibility and terms before requests. Your credentials are stored only in your local private state directory.</p>
+    <p id="account">Not connected</p><div class="actions"><button id="sign-in" class="primary">Continue with ChatGPT</button><button id="sign-out" hidden>Sign out</button><a href="https://chatgpt.com/settings/usage" target="_blank" rel="noreferrer">Manage usage ↗</a></div>
+    <div id="model-section" hidden><label for="model">Description model</label><div class="actions"><select id="model"></select><button id="refresh-models">Refresh models</button></div><p class="small">Choose an image-capable model available to your own connected account. Availability and usage depend on that account.</p></div>
+  </section>
+  <section><span class="step">02</span><h2>Connect your iPhone</h2><p>Localhost access is the default. To test an iPhone, explicitly enable LAN access and use your own trusted network. In RoboMemo, expand <strong>Mac connection</strong> and enter these values.</p>
+    <label for="server-url">Mac server URL</label><div class="actions"><input id="server-url" readonly><button data-copy="server-url">Copy</button></div>
+    <label for="pairing-code">Pairing code</label><div class="actions"><input id="pairing-code" type="password" readonly><button id="show-code">Show</button><button data-copy="pairing-code">Copy</button></div>
+    <p class="small">Then tap <strong>Test connection</strong> on your iPhone. This local prototype uses HTTP on your Wi-Fi. The connection from your Mac to OpenAI uses HTTPS.</p>
+  </section>
+  <section><span class="step">03</span><h2>Analyze your capture</h2><p>Tap <strong>Analyze photo</strong> for a photo, or <strong>Analyze video</strong> for a recorded clip. Video analysis accepts up to 150 sampled images for a clip of up to five minutes; submitted images are sent to OpenAI; it does not send the video file or audio. Brief events between samples may be missed.</p><p>Read the English result in <strong>Developer preview → In app</strong> or send it to your connected glasses. This bridge processes submitted frames; the separate demo may retain its own local analysis cache.</p></section>
+  <footer>Keep this helper running while testing. Recording and playback stay on your iPhone until you choose to analyze sampled frames or share a video.</footer>
+</main>
+<dialog id="welcome"><h2>Your account is connected</h2><p>Requests use the connected account and its applicable limits. Check service eligibility, usage and terms in your account before submitting images.</p><button id="welcome-done" class="primary">Got it</button></dialog>
+</body></html>

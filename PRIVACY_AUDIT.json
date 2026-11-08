@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "files_checked": 314,
+  "bytes_checked": 3198725,
+  "largest_file_bytes": 332523,
+  "findings": [],
+  "limits": "Pattern scan and approved asset hashes only. Review every new diff. Does not scan excluded local state or certify arbitrary model/data redistribution rights."
+}

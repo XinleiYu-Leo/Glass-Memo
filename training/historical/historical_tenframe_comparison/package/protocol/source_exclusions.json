@@ -1,0 +1,35 @@
+{
+  "schema": "robomemo-next-parent-exclusions-v1",
+  "declared_train_parents": [
+    "05df8f7c-48cb-434b-9cdc-e27d37a92900",
+    "1c8a0a01-c595-4238-9743-a65516be96f1",
+    "439a78ee-4776-4b70-9ac2-896f9f22f44c",
+    "5af8e5f9-2a28-485c-9604-6f5f9f290c82",
+    "6eb083c4-a7dc-454b-84bc-2f0d8a69dffe",
+    "7945525f-4496-40df-b633-e75d88a3d86c",
+    "88864901-591f-4bde-b169-d4bdea0eb7b2",
+    "88bae242-7f3a-45d4-b129-5d69b1a1e15a",
+    "947aeb0a-78c2-4667-aea5-b7fa6bc05ff7",
+    "94be9e36-7a4b-4b38-8af3-bb395f144b06",
+    "97e4effd-1b19-4e02-982d-692f8cb21b9f",
+    "98ed45f1-3e9f-426a-bcf4-3d3036138a28",
+    "a54d5238-31c1-4dad-af0d-9ea535dfb5f4",
+    "c3f5972e-9919-496c-a01a-75ffa5c7bcff",
+    "dee85b6f-9a43-467f-ae31-cbf468cd8965",
+    "f6eb8e9b-a925-4112-9eec-32393192e435",
+    "fb9e3ced-f2d6-46fa-9e8e-a60579e00911",
+    "fec55104-c8e2-4eae-93dc-26e5a929259e"
+  ],
+  "declared_dev_parents": [
+    "27b0cdc1-b17c-47c2-bc19-9d81f69bfeb1",
+    "5c3be03c-07a5-4427-a2fe-449f16e8017b",
+    "70f2a750-f403-41b8-aabb-480eb3ab4ed4",
+    "ed90c2e8-c608-423f-a565-7b4cfffbe438",
+    "edc25190-7d42-4bf9-b69b-f821da0a9a8e",
+    "f6fea609-23c4-431c-8ac2-484f334a3a83"
+  ],
+  "exclude_all_declared_parents_even_if_no_accepted_labels": true,
+  "also_exclude_official_validation_parents_from_local_annotations": true,
+  "official_validation_parent_ids_must_be_resolved_on_windows": true,
+  "source_manifest_sha256": "d9b4511a4484715052295cc46d9cbb720b6822525945b66fcd9a80f2842bb9cd"
+}

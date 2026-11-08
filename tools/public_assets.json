@@ -1,0 +1,34 @@
+{
+  "apps/demo/data/synthetic/keys-surface-a.png": {
+    "sha256": "ffd178c6bb5f6462339c4ca5bc0c54e43ae166c461871872dd66cd2a8ae7c611",
+    "origin": "Project-generated fictional geometric demo fixture"
+  },
+  "apps/demo/data/synthetic/wallet-surface-b.png": {
+    "sha256": "b64cbd889d54250e8a077b3a4dc88bdac753ab98c8315827da1d2b55cec8e1e3",
+    "origin": "Project-generated fictional geometric demo fixture"
+  },
+  "apps/demo/data/synthetic/keys-held.png": {
+    "sha256": "a9ddbe574172fa6fb9385327d943efd20b916ce9bc01d6c078a1913b921e7646",
+    "origin": "Project-generated fictional geometric demo fixture"
+  },
+  "apps/demo/data/synthetic/fictional_sequence.mp4": {
+    "sha256": "298cce2324a9e5ddf76001e4b87cfaa9e07b2199879edfdb9135f3cb489ec750",
+    "origin": "Project-generated fictional geometric demo fixture"
+  },
+  "apps/demo/data/synthetic/keys-unseen.png": {
+    "sha256": "300d3e334c71d7847983c21141ea9a234ed4587e0477e6ad669a0475746d0b58",
+    "origin": "Project-generated fictional geometric demo fixture"
+  },
+  "apps/ios/DisplayAccess/Assets.xcassets/AppIcon.appiconset/AppIcon.png": {
+    "sha256": "162ca96229c03cc597997c9f2eeccfced7bcb5230bcd70cdc6f558c2ab9cb52e",
+    "origin": "Upstream Meta DisplayAccess sample asset; see apps/ios/LICENSE and NOTICE"
+  },
+  "apps/ios/DisplayAccess/Assets.xcassets/oil.imageset/oil.jpg": {
+    "sha256": "cdf014fd3d9b2434d0e28ddb04ddc70a8fe561477ed8d62442f12e4558b9e441",
+    "origin": "Upstream Meta DisplayAccess sample asset; see apps/ios/LICENSE and NOTICE"
+  },
+  "apps/ios/DisplayAccess/Assets.xcassets/oil_square.imageset/oil_square.jpg": {
+    "sha256": "694249e82fefaabdd3944f77d3ed85c5fbbc3a941affe052e1cdcbe0a59963a5",
+    "origin": "Upstream Meta DisplayAccess sample asset; see apps/ios/LICENSE and NOTICE"
+  }
+}

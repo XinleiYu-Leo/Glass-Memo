@@ -1,0 +1,187 @@
+{
+  "schema": "robomemo-new24-development-reservation-v1",
+  "status": "reserve_as_seen_development_diagnostics_not_final_test",
+  "reason": "Cases inspected during teacher/input design, human review and frozen old-model replay. Do not fit on them and report same-case scores as independent improvement.",
+  "exclude_from_next_training_round": true,
+  "primary_negative_probe_ids": [
+    "N05",
+    "N08",
+    "N09"
+  ],
+  "confirmed_cpu_false_trigger_case": "N09",
+  "parent_ids": [
+    "0e5c7293-c782-4931-ae12-4650792651bd",
+    "1ead2ccf-0c67-41e7-88d3-de7ecd0c8c7c",
+    "26202090-684d-4be8-b3cc-de04da827e91",
+    "2b99e141-3fdd-48c5-b960-8407f430bb1b",
+    "2dd04abb-859f-4121-9eeb-4db511b54c7b",
+    "2f16540c-5349-4580-a644-6e0a79b2689c",
+    "34de7377-879e-4f37-bd0a-9aab8593210f",
+    "48e621af-81b9-46eb-adc5-bd6893ba22b4",
+    "48f344b2-67e5-46ad-9eac-a995b24dcbc7",
+    "4f52acb9-9f42-4424-a4ac-2d3bc8fd5a5f",
+    "58bb7ed1-02c3-47a9-97f9-85f85f52729e",
+    "7152d311-7801-487c-a6ed-a746e6abaa1f",
+    "7239cd1f-7a30-4451-99cf-9c24f91a25f4",
+    "752dd54d-7835-475a-bccd-931fcf1e9655",
+    "8e5c3d75-8a5c-45c7-ad7c-3dec1c7615ed",
+    "b4707bc6-3579-4992-93ec-0eff21ba8922",
+    "b999ac9b-d285-4f44-944a-a0795969ac51",
+    "bda3cdb5-32ef-433f-bc6a-e77617447d30",
+    "c0f3d0e4-9f20-4174-bb58-cb377df92255",
+    "c6c0171a-50b6-4541-b7d8-daee89bef013",
+    "c6e14005-854e-462f-a5a0-2474b759b1cc",
+    "d78a57ea-da64-48e2-a406-abc8f84b9f85",
+    "e187d152-8068-4446-9c60-e40682e9fe5e",
+    "ed1e7c2d-970b-4773-b945-1df0061b677d"
+  ],
+  "known_related_parent_ids": [
+    "0e5c7293-c782-4931-ae12-4650792651bd",
+    "1ead2ccf-0c67-41e7-88d3-de7ecd0c8c7c",
+    "26202090-684d-4be8-b3cc-de04da827e91",
+    "2b99e141-3fdd-48c5-b960-8407f430bb1b",
+    "2dd04abb-859f-4121-9eeb-4db511b54c7b",
+    "2f16540c-5349-4580-a644-6e0a79b2689c",
+    "34de7377-879e-4f37-bd0a-9aab8593210f",
+    "48e621af-81b9-46eb-adc5-bd6893ba22b4",
+    "48f344b2-67e5-46ad-9eac-a995b24dcbc7",
+    "4f52acb9-9f42-4424-a4ac-2d3bc8fd5a5f",
+    "58bb7ed1-02c3-47a9-97f9-85f85f52729e",
+    "7152d311-7801-487c-a6ed-a746e6abaa1f",
+    "7239cd1f-7a30-4451-99cf-9c24f91a25f4",
+    "752dd54d-7835-475a-bccd-931fcf1e9655",
+    "8e5c3d75-8a5c-45c7-ad7c-3dec1c7615ed",
+    "b4707bc6-3579-4992-93ec-0eff21ba8922",
+    "b999ac9b-d285-4f44-944a-a0795969ac51",
+    "bda3cdb5-32ef-433f-bc6a-e77617447d30",
+    "c0f3d0e4-9f20-4174-bb58-cb377df92255",
+    "c6c0171a-50b6-4541-b7d8-daee89bef013",
+    "c6e14005-854e-462f-a5a0-2474b759b1cc",
+    "d78a57ea-da64-48e2-a406-abc8f84b9f85",
+    "e187d152-8068-4446-9c60-e40682e9fe5e",
+    "ed1e7c2d-970b-4773-b945-1df0061b677d"
+  ],
+  "source_reference_sha256": "1ff6985a904412185ed6b37728b32aca90c2caa8f34661dd0f61cb82076f72d2",
+  "items": [
+    {
+      "item_id": "N01",
+      "clip_uid": "d219dfc4-aaa5-4ea7-9481-cc173fdcff27",
+      "video_uid": "34de7377-879e-4f37-bd0a-9aab8593210f"
+    },
+    {
+      "item_id": "N02",
+      "clip_uid": "f6052b6f-593a-40d5-b4b3-c94537b9825e",
+      "video_uid": "d78a57ea-da64-48e2-a406-abc8f84b9f85"
+    },
+    {
+      "item_id": "N03",
+      "clip_uid": "e03004cc-80ce-4d82-9d09-f50fc82b6456",
+      "video_uid": "752dd54d-7835-475a-bccd-931fcf1e9655"
+    },
+    {
+      "item_id": "N04",
+      "clip_uid": "03f2ed96-1719-427d-acf4-8bf504f1d66d",
+      "video_uid": "2dd04abb-859f-4121-9eeb-4db511b54c7b"
+    },
+    {
+      "item_id": "N05",
+      "clip_uid": "1a666206-37ac-4833-ba7b-e98866b7955b",
+      "video_uid": "2f16540c-5349-4580-a644-6e0a79b2689c"
+    },
+    {
+      "item_id": "N06",
+      "clip_uid": "bbb0894e-eddb-4114-8ff1-1f41d27cf15a",
+      "video_uid": "48e621af-81b9-46eb-adc5-bd6893ba22b4"
+    },
+    {
+      "item_id": "N07",
+      "clip_uid": "d4fc1fd7-c725-454e-9d2b-0fbc774e81d6",
+      "video_uid": "7152d311-7801-487c-a6ed-a746e6abaa1f"
+    },
+    {
+      "item_id": "N08",
+      "clip_uid": "277b18de-4ad9-4c09-970b-91fcea05097d",
+      "video_uid": "8e5c3d75-8a5c-45c7-ad7c-3dec1c7615ed"
+    },
+    {
+      "item_id": "N09",
+      "clip_uid": "f84cb702-daaa-49ae-be20-47aaebfcc768",
+      "video_uid": "ed1e7c2d-970b-4773-b945-1df0061b677d"
+    },
+    {
+      "item_id": "N10",
+      "clip_uid": "20d02685-499c-41f8-ba9f-4414332aef29",
+      "video_uid": "48f344b2-67e5-46ad-9eac-a995b24dcbc7"
+    },
+    {
+      "item_id": "N11",
+      "clip_uid": "1e1e832e-8662-402b-adcd-c524ef62bb25",
+      "video_uid": "bda3cdb5-32ef-433f-bc6a-e77617447d30"
+    },
+    {
+      "item_id": "N12",
+      "clip_uid": "5293587a-e6c4-4760-8277-cf284588aac3",
+      "video_uid": "c6c0171a-50b6-4541-b7d8-daee89bef013"
+    },
+    {
+      "item_id": "N13",
+      "clip_uid": "f646012d-baca-46a6-bc03-32047c83f5dc",
+      "video_uid": "b4707bc6-3579-4992-93ec-0eff21ba8922"
+    },
+    {
+      "item_id": "N14",
+      "clip_uid": "28d039f1-5eb0-4b3f-a13d-cbf3e25b570d",
+      "video_uid": "1ead2ccf-0c67-41e7-88d3-de7ecd0c8c7c"
+    },
+    {
+      "item_id": "N15",
+      "clip_uid": "acd60a71-5a6c-4da6-94d8-2213e08d9f85",
+      "video_uid": "e187d152-8068-4446-9c60-e40682e9fe5e"
+    },
+    {
+      "item_id": "N16",
+      "clip_uid": "2711d51a-8660-4cb4-b720-263666042cd9",
+      "video_uid": "7239cd1f-7a30-4451-99cf-9c24f91a25f4"
+    },
+    {
+      "item_id": "N17",
+      "clip_uid": "4f68183f-610a-44de-b102-e7f300b49dcd",
+      "video_uid": "26202090-684d-4be8-b3cc-de04da827e91"
+    },
+    {
+      "item_id": "N18",
+      "clip_uid": "387f9c84-bb32-4265-ad89-43cfd3ec3292",
+      "video_uid": "4f52acb9-9f42-4424-a4ac-2d3bc8fd5a5f"
+    },
+    {
+      "item_id": "N19",
+      "clip_uid": "caa19eae-bc6a-468c-b215-f1677a1fc147",
+      "video_uid": "2b99e141-3fdd-48c5-b960-8407f430bb1b"
+    },
+    {
+      "item_id": "N20",
+      "clip_uid": "0455af1e-3b17-47b5-9f6b-e2724f074c96",
+      "video_uid": "c0f3d0e4-9f20-4174-bb58-cb377df92255"
+    },
+    {
+      "item_id": "N21",
+      "clip_uid": "2e247b8c-e036-40e5-9f5a-d003a7131ff7",
+      "video_uid": "c6e14005-854e-462f-a5a0-2474b759b1cc"
+    },
+    {
+      "item_id": "N22",
+      "clip_uid": "15a5ea57-d57d-459f-87ca-a8079b32a6be",
+      "video_uid": "b999ac9b-d285-4f44-944a-a0795969ac51"
+    },
+    {
+      "item_id": "N23",
+      "clip_uid": "71e2f5f3-fb8e-4fdd-822f-644a8996fb3e",
+      "video_uid": "0e5c7293-c782-4931-ae12-4650792651bd"
+    },
+    {
+      "item_id": "N24",
+      "clip_uid": "c98de0c3-6ba2-4bac-a6e4-f1082044420b",
+      "video_uid": "58bb7ed1-02c3-47a9-97f9-85f85f52729e"
+    }
+  ]
+}

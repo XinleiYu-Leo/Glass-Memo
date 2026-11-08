@@ -1,0 +1,143 @@
+{
+ "name": "finetune_mobilenet_n1652_seed0",
+ "source_run": "run_v4_20261027_203618",
+ "file_sha256": "7ebc49f63201c8c25926b67a10b478be4f2392882450a7e0d4177fd77d075b20",
+ "contents": "torch.save({'state_dict': Student.state_dict(), 'recipe': RECIPE}); Student defined in code/06_train_v4_model_improvement/finetune.py (build())",
+ "recipe": {
+  "trainable_from_block": 9,
+  "epochs": 12,
+  "batch_windows": 32,
+  "lr_backbone": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "crop_scale": [
+   0.8,
+   1.0
+  ],
+  "flip": 0.5,
+  "brightness": 0.2,
+  "contrast": 0.2,
+  "head": "LayerNorm(2304)->Linear(128)->ReLU->Dropout(0.3)->Linear(1)",
+  "pool": "mean,max,last-first,mean|diff|"
+ },
+ "torch": "2.10.0+cu128",
+ "history_seed0": [
+  {
+   "epoch": 1,
+   "train_loss": 0.6865537984896515,
+   "dev_ap_info_only": 0.7139754827187286
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.5978197603335392,
+   "dev_ap_info_only": 0.7258713416202851
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.5231691046142116,
+   "dev_ap_info_only": 0.7098416053233498
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.4582112041859015,
+   "dev_ap_info_only": 0.7200041882012252
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.41249097050246547,
+   "dev_ap_info_only": 0.7256615919125319
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.3212083580274559,
+   "dev_ap_info_only": 0.7148545626870116
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.28500336516855995,
+   "dev_ap_info_only": 0.7161009490520105
+  },
+  {
+   "epoch": 8,
+   "train_loss": 0.20959513174419542,
+   "dev_ap_info_only": 0.7136364291484698
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.16130932101181575,
+   "dev_ap_info_only": 0.7126485555605659
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.15012404488593556,
+   "dev_ap_info_only": 0.7178262053268962
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.10039052175082826,
+   "dev_ap_info_only": 0.7149783868226218
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.0835257137225846,
+   "dev_ap_info_only": 0.7092217572623831
+  }
+ ],
+ "eval_metrics_from_recorded_scores": {
+  "finetune/n1652/seed0": {
+   "ap": 0.7503910705518269,
+   "auc": 0.7520988696590216,
+   "recall": 0.7294685990338164,
+   "specificity": 0.616504854368932,
+   "balanced_accuracy": 0.6729867267013743,
+   "recall_take": 0.7521367521367521,
+   "recall_put": 0.7,
+   "ap_ci95": [
+    0.6984461956334402,
+    0.8016930410376821
+   ]
+  },
+  "finetune/n1652/seed1": {
+   "ap": 0.7373018835490479,
+   "auc": 0.7383213732939355,
+   "recall": 0.7391304347826086,
+   "specificity": 0.5631067961165048,
+   "balanced_accuracy": 0.6511186154495567,
+   "recall_take": 0.7350427350427351,
+   "recall_put": 0.7444444444444445,
+   "ap_ci95": [
+    0.6810338902566417,
+    0.7954748255275549
+   ]
+  },
+  "finetune/n1652/seed2": {
+   "ap": 0.7416188346845027,
+   "auc": 0.7474907368322311,
+   "recall": 0.5458937198067633,
+   "specificity": 0.7572815533980582,
+   "balanced_accuracy": 0.6515876366024107,
+   "recall_take": 0.5470085470085471,
+   "recall_put": 0.5444444444444444,
+   "ap_ci95": [
+    0.689976262397021,
+    0.7930768181138668
+   ]
+  },
+  "finetune/n1000/seed0": {
+   "ap": 0.7280128310162363,
+   "auc": 0.7354368932038835,
+   "recall": 0.5072463768115942,
+   "specificity": 0.8155339805825242,
+   "balanced_accuracy": 0.6613901786970593,
+   "recall_take": 0.5384615384615384,
+   "recall_put": 0.4666666666666667,
+   "ap_ci95": [
+    0.6599480736938438,
+    0.7878940692259644
+   ]
+  }
+ },
+ "only_seed0_saved": true,
+ "verification": "Not re-run here (no torch in the packaging environment). Load with finetune.build(torch, nn)() then load_state_dict; inputs as in finetune.to_input(rng=None).",
+ "note": "Did not significantly beat the frozen-feature main model (AP +0.014 [-0.037, 0.060]); overfits (train loss 0.69->0.12, dev AP ~0.71)."
+}

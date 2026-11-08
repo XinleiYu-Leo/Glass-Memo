@@ -1,0 +1,57 @@
+{
+  "schema": "robomemo-fho-transfer-v1-train-package",
+  "package_version": "v5-audio",
+  "files": [
+    {
+      "path": "common.py",
+      "sha256": "3c2551cc50050a95cbc141dcc9c95b51c709634fe3471ad3c32a037c9665085a",
+      "bytes": 3041
+    },
+    {
+      "path": "extract_windows.py",
+      "sha256": "94bc4fc3ad132842596ff0e7c954050a0a3b1c3cb2a4d3daefec57b686756e74",
+      "bytes": 5138
+    },
+    {
+      "path": "metrics_lib.py",
+      "sha256": "f8ada9b6f7e5e1005a64125e26795518741898a0b46e590f360e8827d40671b3",
+      "bytes": 11283
+    },
+    {
+      "path": "make_features_v4.py",
+      "sha256": "d6aaf7d51cdc34d35d7db2b35916eca7985036f9d7a67d3f3f2deacc63f32204",
+      "bytes": 4444
+    },
+    {
+      "path": "extract_audio.py",
+      "sha256": "1ad815f9dca78824a66ca70bdaefae40a5ae7ea777c3ed9cf232cdad9f1aa9f5",
+      "bytes": 4734
+    },
+    {
+      "path": "audio_features.py",
+      "sha256": "7801fe0c4d3cbc51e085c04b0f34a023bdac3b392d635ba1d2ae26e9fb56ceb1",
+      "bytes": 4670
+    },
+    {
+      "path": "train_eval_audio.py",
+      "sha256": "2fbd982bbd2389dc7662ed314d4fd825f49875fa335bdda9e8b71b2b223771eb",
+      "bytes": 7151
+    },
+    {
+      "path": "run_pipeline_v5.py",
+      "sha256": "b2e651f385fcadc34d1292ebd0dd5e1ed9b3c0f6c73d446aea160431b503a199",
+      "bytes": 5309
+    },
+    {
+      "path": "RoboMemo_audio_v5.ps1",
+      "sha256": "c610c7b7ce21498de67ab428089dc9918aa26b81f26500394e36a8f5f3ac9941",
+      "bytes": 1399
+    },
+    {
+      "path": "先看这里.txt",
+      "sha256": "9c7dece5ffbd6aa9aca96b36996b066ae0a752c2daec6ef68e00d655a79d2b90",
+      "bytes": 746
+    }
+  ],
+  "sanitized_for_sharing": "Explicit collaborator-supplied project/annotation paths; no owner-specific environment paths; manifest regenerated."
+}

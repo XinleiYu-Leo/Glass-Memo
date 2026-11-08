@@ -1,0 +1,13 @@
+# Runtime data is private; only the fictional fixture is versioned.
+.env
+.env.*
+!.env.example
+node_modules/
+*.log
+.auto-work/
+data/*
+!data/index.json
+!data/synthetic/
+tools/auto-extract
+tools/auto-remux
+.DS_Store

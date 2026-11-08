@@ -1,0 +1,53 @@
+Optional localhost vision bridge contract
+
+This describes the existing client contract. A sanitized prototype reference
+implementation is included at ../../services/bridge from this directory. A collaborator must
+configure their own independently authorized account or compatible adapter.
+The default UI does not invoke this contract.
+
+Transport: HTTP on 127.0.0.1, default port 8766; redirects rejected.
+Authentication: Authorization: Bearer <runtime pairing code>. No real code is
+bundled. The code is read only when an analysis job is explicitly started.
+
+GET /v1/status returns an object including:
+  ready: true
+  model: string identifying the selected vision model
+  object_prompt_version: "object-observations-v1"
+
+POST /v1/object-observations receives:
+  duration_seconds: number
+  expected_model: string
+  frames: array of at most 40 objects with
+    frame_id: string
+    timestamp_seconds: number
+    jpeg_base64: base64 JPEG data
+
+It returns:
+  request_id: non-empty string
+  model: exact model identifier matching expected_model
+  prompt_version: "object-observations-v1"
+  observations: array of per-object/per-frame records
+  refine_frame_ids: array of distinct input frame IDs
+  raw_output: string (optional diagnostic model response)
+
+Each observation has:
+  object_id: keys | wallet | earbud_case
+  frame_id: one of the submitted frame IDs
+  state: held | visible | uncertain
+  visibility: clear | partial | unclear
+  identity: match | uncertain
+  hand_relation: held | touching | free | unclear
+  needs_review: boolean
+  location_zh: non-empty description, <=120 characters
+  observation_zh: non-empty description, <=300 characters
+
+State consistency and conservative evidence requirements are validated in
+validateResponse and annotateEvidence in auto-pipeline.mjs. For example, held
+requires hand_relation=held; unclear/partial/uncertain records require review.
+At least two distinct nearby supporting clear frames are required for a clear
+automatic candidate. The pipeline does not publish a model-created "placed"
+state as confirmed placement. Unit tests illustrate valid and invalid responses.
+
+The current client is specialized to three object IDs. Supporting arbitrary
+objects requires a coordinated change to object definitions and the adapter's
+prompt/schema. A provider API key by itself is not a bridge implementation.

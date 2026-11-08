@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "sdk_version": "1.0.1",
+  "cases": [
+    {
+      "case": "A",
+      "audio_enabled": true,
+      "requested_imu_hz": 60,
+      "requested_video_resolution": "high",
+      "requested_video_fps": 7,
+      "movie_duration_seconds": 112.935,
+      "video_frames_received_written_decoded": 780,
+      "native_video_size_counts": {
+        "720x1280": 1,
+        "504x896": 779
+      },
+      "movie_pts_matches_relative_sdk_pts": true,
+      "imu_samples": 6314,
+      "normal_imu_interval_rate_hz": 59.98008661124506,
+      "imu_longest_source_gap_seconds": 10.4247868,
+      "imu_longest_host_delivery_pause_seconds": 15.8606439590003,
+      "imu_gaps_over_one_second": 1,
+      "app_queue_overflow_count": 0,
+      "app_maximum_queue_wait_ms": 14.661458,
+      "sync_test_completed": true,
+      "app_queue_peak_pending_jobs": 43
+    },
+    {
+      "case": "B",
+      "audio_enabled": true,
+      "requested_imu_hz": 30,
+      "requested_video_resolution": "high",
+      "requested_video_fps": 7,
+      "movie_duration_seconds": 97.33,
+      "video_frames_received_written_decoded": 667,
+      "native_video_size_counts": {
+        "720x1280": 9,
+        "504x896": 658
+      },
+      "movie_pts_matches_relative_sdk_pts": true,
+      "imu_samples": 2859,
+      "normal_imu_interval_rate_hz": 29.990403071017276,
+      "imu_longest_source_gap_seconds": 3.6295775,
+      "imu_longest_host_delivery_pause_seconds": 13.612023125000633,
+      "imu_gaps_over_one_second": 1,
+      "app_queue_overflow_count": 0,
+      "app_maximum_queue_wait_ms": 17.784625,
+      "sync_test_completed": true,
+      "app_queue_peak_pending_jobs": 30,
+      "whole_observed_sdk_span_rate_hz": 28.849058377333414,
+      "thresholded_gap_excess_fraction": 0.0386009990523801
+    },
+    {
+      "case": "C",
+      "audio_enabled": false,
+      "audio_module_status": "disabled",
+      "audio_module_reason": "user_disabled",
+      "requested_imu_hz": 30,
+      "requested_video_resolution": "high",
+      "requested_video_fps": 7,
+      "movie_duration_seconds": 94.813333,
+      "video_frames_received_written_decoded": 623,
+      "native_video_size_counts": {
+        "720x1280": 313,
+        "504x896": 310
+      },
+      "movie_pts_matches_relative_sdk_pts": true,
+      "imu_samples": 2897,
+      "normal_imu_interval_rate_hz": 29.990942735293938,
+      "imu_longest_source_gap_seconds": 0.193909,
+      "imu_longest_host_delivery_pause_seconds": 8.117635208000138,
+      "imu_gaps_over_one_second": 0,
+      "imu_source_gaps_seconds": [
+        0.193909,
+        0.149505,
+        0.1623044
+      ],
+      "app_queue_overflow_count": 0,
+      "app_maximum_queue_wait_ms": 11.909291000000001,
+      "app_queue_peak_pending_jobs": 47,
+      "sync_test_completed": true,
+      "whole_observed_sdk_span_rate_hz": 29.89665731069909,
+      "thresholded_gap_excess_fraction": 0.0041884060667973545
+    }
+  ],
+  "definitions": {
+    "native_video_size_counts": "SDK-delivered frame dimensions before App resizing; not proof of optical image quality.",
+    "source_gap": "Consecutive sorted unique SDK timestamp interval greater than2.5 requested nominal periods; no interpolated samples.",
+    "thresholded_gap_excess_fraction": "Sum(interval minus one nominal period) for intervals>2.5 periods divided by first-to-last observed SDK span. Not hardware packet loss rate; excludes unobserved beginning/end.",
+    "host_delivery_pause": "Consecutive Motion AsyncStream consumer receipt times on phone. Includes upstream buffering and scheduling, not a sensor-capture gap.",
+    "buffer_limits": "SDK Motion latest256 samples and App sidecar queue256 jobs are separate buffers."
+  },
+  "validation": {
+    "local_assertions_passed": 232,
+    "signed_ios_build_passed": true,
+    "installed_and_launched": true,
+    "empty_audio_failure_verified_fixed": true,
+    "movie_source_pts_mapping_verified_fixed": true,
+    "realtime_imu_delivery_stable": false
+  },
+  "limits": [
+    "One recording per configuration; not randomized replicates.",
+    "Action timing and native video resolution differ.",
+    "Clock offsets from motion correlation are approximate per-session estimates, not calibration constants.",
+    "No proof audio is the only cause.",
+    "Medium@7 is not yet implemented in multisensor mode."
+  ],
+  "privacy": "Whitelisted aggregate fields only; no media, raw sensor rows, accounts, credentials, machine paths, session UUIDs, or device identifiers."
+}

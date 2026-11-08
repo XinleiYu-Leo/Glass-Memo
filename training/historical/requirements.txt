@@ -1,0 +1,9 @@
+# Tested code environment; choose the appropriate torch build for your platform.
+torch==2.10.0
+torchvision==0.25.0
+numpy>=2.0,<3
+Pillow>=10,<13
+# Optional data preparation dependency (not needed by historical model inference):
+av>=14,<18
+# Optional accelerated annotation parsing:
+ijson>=3,<4

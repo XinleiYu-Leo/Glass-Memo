@@ -1,0 +1,42 @@
+{
+  "schema": "robomemo-collaboration-validation-v1",
+  "status": "passed",
+  "snapshot_date": "2026-11-06",
+  "scope": "Sanitized source snapshot and existing saved models; no remote repository created or pushed.",
+  "checks": {
+    "ios_unsigned_real_sdk_build": "passed; SDK 1.0.1",
+    "ios_recorder_assertions": 195,
+    "ios_controller_assertions": 37,
+    "demo_node_tests": 55,
+    "bridge_node_tests": 102,
+    "demo_swift_tools_synthetic_video": "passed",
+    "multisensor_python_tests": 13,
+    "existing_local_sessions_reaudited": 3,
+    "training_historical_tests": 36,
+    "training_python_syntax_files": 77,
+    "training_preserved_manifest_entries": 53,
+    "saved_frozen_heads_checked": 16,
+    "registered_model_artifacts": 69,
+    "saved_historical_and_finetuned_models_synthetic_inference": "passed",
+    "hand_object_100doh_synthetic_cpu_inference": "passed"
+  },
+  "evidence": [
+    "apps/ios/VALIDATION.md",
+    "apps/demo/VALIDATION.json",
+    "services/bridge/VALIDATION.json",
+    "tools/multisensor/VALIDATION.json",
+    "training/VALIDATION.json",
+    "training/fho/VALIDATION.json",
+    "baselines/hand_object/VALIDATION.json",
+    "PRIVACY_AUDIT.json"
+  ],
+  "limits": [
+    "No device install or new hardware recording performed for this package.",
+    "No real-dataset model training, task evaluation or teacher inference rerun. Historical synthetic trainer tests optimize tiny fixtures only.",
+    "Existing private sessions were read locally to verify the generic audit; raw content is not distributed.",
+    "No cloud account login or model inference attempted.",
+    "No Windows/CUDA execution in this packaging task.",
+    "Privacy checks are pattern/asset audits and manual review, not a guarantee for future added files.",
+    "GitHub upload and applicable redistribution decisions remain with the project collaborators."
+  ]
+}

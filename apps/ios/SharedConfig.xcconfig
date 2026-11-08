@@ -1,0 +1,8 @@
+// Shared defaults; personal overrides belong in ignored Config.local.xcconfig.
+DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = org.example.robomemo
+ROBOMEMO_CALLBACK_SCHEME = org.example.robomemo
+// Developer Mode does not require a developer-center client token.
+META_APP_ID = 0
+CLIENT_TOKEN =
+#include? "Config.local.xcconfig"

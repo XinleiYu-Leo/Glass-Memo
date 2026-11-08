@@ -1,0 +1,7 @@
+RoboMemo fho_transfer_v1 训练包 v3（扩充数据版）
+
+需要：<PROJECT>\fho_transfer_v1\selection_v2（新选片包解压于此）
+      <PROJECT>\fho_transfer_v1\downloads\v2\clips（旧 407 + 新下载的片段）
+已抽过的帧（frames_v2）会直接复用，只抽新增窗口。
+训练 200/500/1000/全部 四档；检查集分别报告：全部 414 段，以及与上次相同的 332 段（eval_v1）。
+不下载、不上传、不调用 API；回传 ZIP 只含数字和小模型权重。local_only_contact_sheets 只给自己看。

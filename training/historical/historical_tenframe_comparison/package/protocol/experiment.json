@@ -1,0 +1,152 @@
+{
+  "schema": "robomemo-tenframe-comparison-protocol-v1",
+  "experiment_id": "tenframe_comparison_20261026",
+  "status": "frozen_before_new_selection_labels_and_training",
+  "policy": "pick-place-causal-input-diagnostic-v1",
+  "policy_instructions_sha256": "7aa5235437bb061ca086901d63e82373436d37ac8759762c0aa117a167be1239",
+  "purpose": "Paired development comparison of four versus ten observed frames under identical window labels, data splits and classifier capacity. Not a final independent test, temporal-order model or deployed device benchmark.",
+  "selection": {
+    "seed": 20261026,
+    "total": 64,
+    "one_window_per_parent_and_known_group_component": true,
+    "split_counts": {
+      "train": 48,
+      "dev": 16
+    },
+    "stratum_counts": {
+      "train": {
+        "candidate_positive": 24,
+        "candidate_hard_negative": 16,
+        "candidate_boundary": 8
+      },
+      "dev": {
+        "candidate_positive": 8,
+        "candidate_hard_negative": 6,
+        "candidate_boundary": 2
+      }
+    },
+    "stratum_is_not_label": true,
+    "anchor": "LTA annotation context midpoint proxy, not observed action completion",
+    "freeze_before_download_viewing_teacher": true,
+    "no_reselection_after_teacher": true,
+    "no_split_moves": true,
+    "exclude_official_val_test": true,
+    "exclude_old_train_dev": true,
+    "exclude_prior24_and_known_group_closure": true
+  },
+  "input": {
+    "duration_seconds": 1.5,
+    "frame_count": 10,
+    "sampling_fps": 6,
+    "pixels": 224,
+    "format": "RGB PNG",
+    "resize": "Pillow bilinear aspect-preserving letterbox",
+    "padding_rgb": [
+      124,
+      116,
+      104
+    ],
+    "sampling": "Nearest actual decoded source frame at or before requested time; no interpolation or future frame; ten distinct source frames within target",
+    "baseline_indices_zero_based": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "tenframe_indices_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "future_teacher": {
+    "primary_jobs": 64,
+    "repeat_jobs": 6,
+    "max_attempts_including_errors_retries": 70,
+    "repeat_selection": "one per split and stratum before outputs",
+    "repeats_are_not_extra_training_rows": true,
+    "external_calls_authorized_in_this_package": false,
+    "payload": "Only anonymous item/frame IDs, target times and designated 224px PNGs; no reference/candidate labels, source annotations, prior predictions or audit video"
+  },
+  "labels": {
+    "schema": "robomemo-tenframe-reviewed-labels-v1",
+    "all_64_items_required": true,
+    "input_scope": "same_ten_224_pngs",
+    "accepted": "Teacher and independent blind image reviewer agree on present or absent; reviewer has not seen teacher, source annotations or candidate stratum. Any predeclared repeat must agree. Accepted present needs chronological before/after evidence on the same event within target. Accepted absent needs visible non-target evidence. Unknown, disagreement, missing result or inadequate evidence stays null. No source-video answers backfilled into sampled-input labels.",
+    "source": "AI-consensus weak labels, not human gold; no soft-logit distillation",
+    "blind_review_saw_teacher": false,
+    "min_train_total": 24,
+    "min_train_each_class": 8,
+    "min_dev_total": 8,
+    "min_dev_each_class": 3,
+    "gate_failure": "Stop. Keep original assignments, null labels and failure report; do not move split, window or silently refill."
+  },
+  "model": {
+    "encoder": "mobilenet_v3_small",
+    "encoder_frozen": true,
+    "encoder_source_checkpoint_sha256": "6c80dd106518f165331e7ba662ef33279d672265c6384c0f35c108a1489cb0d7",
+    "encoder_features": 576,
+    "summary": "concatenate temporal mean, temporal max, last minus first",
+    "summary_dimension": 1728,
+    "head": "Linear(1728,1)",
+    "trainable_parameters": 1729,
+    "one_shared_ten_frame_feature_extraction": true,
+    "old_head_and_normalization_not_reused": true,
+    "interpretation": "Additional middle frames affect unordered mean/max; identical endpoints make last-first identical across arms. This is not a learned temporal-order model."
+  },
+  "optimization": {
+    "seeds": [
+      566,
+      567,
+      568
+    ],
+    "epochs": 40,
+    "checkpoint_selection": "fixed final epoch 40; no dev or epoch selection",
+    "batch": "full accepted training set",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "loss": "BCEWithLogitsLoss",
+    "pos_weight": "train_negative_count / train_positive_count",
+    "normalization": "per-arm summary features, accepted-train-only mean and population std, std clamp min 0.05",
+    "threshold": 0.5,
+    "same_paired_initialization": true,
+    "no_augmentation": true,
+    "no_hyperparameter_sweep": true
+  },
+  "evaluation": {
+    "split": "development only",
+    "metrics": [
+      "confusion",
+      "balanced_accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "unweighted_bce",
+      "all_positive_baseline"
+    ],
+    "report_all_seeds": true,
+    "report_paired_differences": true,
+    "do_not_pick_best_seed": true,
+    "no_threshold_tuning": true,
+    "small_gate_is_not_power_analysis": true,
+    "prior24": "Reserved seen diagnostics only, excluded from training and development comparison; any later replay explicitly separate"
+  },
+  "artifact_sources": {
+    "source_exclusions.json": "ebc94abb7b109c901253924d11edf7b7a69c288893781499a134e2c01355f497",
+    "development_reservation.json": "d640ad54d31d97b507e622b2eb46a23caae537671e16407422d7c380c6515b65",
+    "actual_model_instructions.txt": "7aa5235437bb061ca086901d63e82373436d37ac8759762c0aa117a167be1239"
+  },
+  "executed": {
+    "new_source_selection": false,
+    "new_teacher_calls": 0,
+    "new_training_runs": 0
+  }
+}

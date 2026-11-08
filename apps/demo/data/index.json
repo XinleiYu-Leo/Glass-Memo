@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "title": "RoboMemo · 合成样例",
+  "provenance": "synthetic_fixture",
+  "indexed_at": "2000-01-01T00:00:00Z",
+  "objects": [
+    {
+      "id": "keys",
+      "label_zh": "钥匙",
+      "aliases": [
+        "钥匙",
+        "鑰匙",
+        "key",
+        "keys"
+      ]
+    },
+    {
+      "id": "wallet",
+      "label_zh": "钱包",
+      "aliases": [
+        "钱包",
+        "錢包",
+        "wallet"
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "id": "synthetic-sequence",
+      "label": "合成序列（虚构场景）",
+      "started_at": "2000-01-01T00:00:00Z",
+      "duration_seconds": 20,
+      "video_file": "data/synthetic/fictional_sequence.mp4",
+      "poster_file": "data/synthetic/keys-surface-a.png",
+      "quality_note": "完全合成的图形，非真实画面，也非模型输出。"
+    }
+  ],
+  "limitations": [
+    "全部视频、图片和观察均为程序生成的虚构示例。",
+    "仅用于检验检索、时间排序和不确定性显示。"
+  ],
+  "observations": [
+    {
+      "id": "keys-surface-a",
+      "object_id": "keys",
+      "clip_id": "synthetic-sequence",
+      "output_pts_seconds": 3,
+      "state": "placed",
+      "location_zh": "测试台 A 上",
+      "observation_zh": "合成图形：钥匙位于虚构测试台 A。",
+      "is_object_visible": true,
+      "use_for_last_seen": true,
+      "usable_as_clear_evidence": true,
+      "evidence_file": "data/synthetic/keys-surface-a.png",
+      "provenance": "synthetic_fixture",
+      "review_status": "synthetic",
+      "limitations": [
+        "合成测试样例；不代表真实物品或实验效果。"
+      ]
+    },
+    {
+      "id": "keys-held",
+      "object_id": "keys",
+      "clip_id": "synthetic-sequence",
+      "output_pts_seconds": 7,
+      "state": "held",
+      "location_zh": "虚构持有区域",
+      "observation_zh": "合成图形：钥匙处于持有状态；后续落点未展示。",
+      "is_object_visible": true,
+      "use_for_last_seen": true,
+      "usable_as_clear_evidence": true,
+      "evidence_file": "data/synthetic/keys-held.png",
+      "provenance": "synthetic_fixture",
+      "review_status": "synthetic",
+      "limitations": [
+        "合成测试样例；不代表真实物品或实验效果。"
+      ]
+    },
+    {
+      "id": "keys-unseen",
+      "object_id": "keys",
+      "clip_id": "synthetic-sequence",
+      "output_pts_seconds": 12,
+      "state": "uncertain",
+      "location_zh": "去向未知",
+      "observation_zh": "合成图形：钥匙已经离开图示，不能补全去向。",
+      "is_object_visible": false,
+      "use_for_last_seen": false,
+      "usable_as_clear_evidence": false,
+      "evidence_file": "data/synthetic/keys-unseen.png",
+      "provenance": "synthetic_fixture",
+      "review_status": "synthetic",
+      "limitations": [
+        "合成测试样例；不代表真实物品或实验效果。"
+      ]
+    },
+    {
+      "id": "wallet-surface-b",
+      "object_id": "wallet",
+      "clip_id": "synthetic-sequence",
+      "output_pts_seconds": 14,
+      "state": "visible",
+      "location_zh": "测试台 B 上",
+      "observation_zh": "合成图形：钱包位于虚构测试台 B。",
+      "is_object_visible": true,
+      "use_for_last_seen": true,
+      "usable_as_clear_evidence": true,
+      "evidence_file": "data/synthetic/wallet-surface-b.png",
+      "provenance": "synthetic_fixture",
+      "review_status": "synthetic",
+      "limitations": [
+        "合成测试样例；不代表真实物品或实验效果。"
+      ]
+    }
+  ]
+}

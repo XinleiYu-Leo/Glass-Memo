@@ -1,0 +1,22 @@
+标签与划分规则 fho_transfer_v1_draft3（本轮选片所用；训练前如有修改必须改版本号）
+
+问题：决策时刻 t 之前 1.5 秒内，是否完成了一次"拿起"或"放下"。
+标签来源：Ego4D FHO 人工标注推出的粗标签（ego4d_fho_annotation_weak），不是逐帧视觉金标。
+
+正例：动词 take_(pick,_grab,_get) 或 put_(place,_leave,_drop)；is_valid_action=true，is_partial/is_rejected/
+      is_invalid_annotation=false；clip_critical_frames 中 PRE≤PNR≤POST；t = POST/30 + 0.25 秒；
+      要求 PNR 在窗口内（POST−PNR ≤ 1.25 秒），否则不用（"转移比窗口长"）。
+负例：明确的非转移动词（cut、clean、wash、wipe、open、close、adjust、turn、touch、paint、pour、apply、dip、knit、
+      smooth、press、operate、turn_on、turn_off、tighten、loosen、draw、spray、scrape、screw、mix、sew、iron、
+      crochet、squeeze、drill、mark、hit、scoop、inspect、mold、shake）；同样有效且关键帧有序；
+      t = min(POST+0.25, max(PNR+0.75, PRE+1.5))，窗口必须落在该动作自身 PRE−0.5 之后（动作正在进行）；
+      同一 clip 内任何"非负例动词"的动作（含 take/put/move/remove/lift/carry/throw/insert/attach/hold/push/pull/
+      动词缺失等）其忙碌区间与窗口重叠就丢弃。忙碌区间：有关键帧用 [PRE−0.5, POST+0.5]，否则叙述时刻±2 秒。
+不用：无效/partial/rejected、关键帧缺失或无序、动词不在两张表里、未标注时段。
+
+划分：规范父视频 = 相关组闭包中字典序最小的 ID；sha256("robomemo-fho-transfer-v1:"+ID) mod 100：
+      <70 训练，<80 开发，其余评估。三者父视频与 clip 均无交集（已校验）。
+挑选：训练每父视频最多 4 正 4 负，开发/评估最多 3 正 3 负；同一 clip 内同类窗口间隔 ≥3 秒；
+      正例尽量拿起/放下交替；固定种子 20261027 打乱；200 ⊂ 500 ⊂ 1000 嵌套，均正负各半。
+结果：训练 1000（拿起 228、放下 272、其他 500，249 父视频）；开发 190（44 父视频）；评估 332（81 父视频）；
+      需下载 clip 407 个。

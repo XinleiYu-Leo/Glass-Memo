@@ -1,0 +1,31 @@
+RoboMemo：现有人工标注盘点
+
+这一步只读取 Windows D 盘已有文件，返回一份小报告。
+不下载视频，不上传任何内容，不重新训练，也不修改旧标注或模型。
+
+使用方法
+1. 在 Windows 的 Downloads 中完整解压这个 ZIP。
+2. 运行同目录 RoboMemo_check_annotations.ps1。聊天中会给出可直接复制的 PowerShell 命令。
+3. 完成后打开 <PROJECT>\annotation_checks，进入最新 check_ 开头的文件夹。
+4. 只把 RoboMemo_annotation_return.zip 发回聊天，不需要发大视频。
+
+检查内容
+- Ego4D 现有动作标注、交互关键帧、有效性与时间字段。
+- 哪些片段确实已经在本地，以及哪些来源属于保留或检查组。
+- 安装好的 PyTorch 和显卡基础算子是否可用。
+- 未标注的片段不会自动被当作负例。
+
+运行期间
+主标注文件约 2 GB，会按小块读取并定期显示进度。
+不要因为短暂没有输出就重复运行；不同运行会生成不同报告文件夹。
+如果看到 CHECK_STATUS: check_needs_attention，仍把已生成的 ZIP 发回即可。
+如果连 ZIP 都没有生成，把最后的错误文字发回。
+
+默认位置
+标注：<EGO4D_ROOT>\v2\annotations
+项目：<PROJECT>
+Python：WSL <WSL_PYTHON>
+
+边界
+这只是数据和环境盘点，算子检查通过不代表完整手部模型已在 Windows 上验证。
+Mac 上另行运行的手物模型试验不会改变这些盘点结果，也不会改变旧训练标签。

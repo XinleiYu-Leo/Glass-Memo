@@ -1,0 +1,24 @@
+{
+  "schema": "robomemo-collaboration-module-validation-v1",
+  "date": "2026-11-06",
+  "environment": {
+    "os": "macOS",
+    "node": "24.22.1"
+  },
+  "module": "apps/demo",
+  "checks": {
+    "tests": 55,
+    "passed": 55,
+    "fresh_synthetic_http_smoke": true,
+    "swift_tools_compile": true,
+    "synthetic_extract_sampled_frames": 11,
+    "synthetic_remux_smoke": true
+  },
+  "external_model_requests": 0,
+  "real_login_checked": false,
+  "real_recordings_included": false,
+  "limitations": [
+    "These are code/fixture checks, not model performance evidence.",
+    "Student event selector is not integrated into the demo/bridge."
+  ]
+}

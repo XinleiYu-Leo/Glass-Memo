@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f34">
+  <title>RoboMemo · 找回看见的线索</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#query">跳到搜索</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="RoboMemo 首页">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>RoboMemo<span class="brand-sub">找回看见的线索</span></span>
+    </a>
+    <span class="local-badge"><span class="status-dot" aria-hidden="true"></span>合成示例 · 非真实录像</span>
+  </header>
+
+  <div class="workspace">
+    <aside class="library" aria-labelledby="library-title">
+      <div class="source-switch" role="group" aria-label="线索来源"><button id="source-reviewed" type="button" aria-pressed="true">复核参考</button><button id="source-auto" type="button" aria-pressed="false">自动识别</button></div>
+      <p id="source-description" class="source-description">合成测试数据 · 非实验结果</p>
+      <div class="section-eyebrow">合成示例录像</div>
+      <div class="library-heading"><h2 id="library-title">查找范围</h2><span id="clip-count" class="count-badge">—</span></div>
+      <p class="library-intro">选择一段录像，或一起查找。</p>
+      <div id="clip-filters" class="clip-filters" aria-label="录像筛选"><div class="library-placeholder">正在读取录像…</div></div>
+      <div class="library-note"><span class="note-mark" aria-hidden="true">i</span><p>画面留下的是<strong>当时的线索</strong>，物品现在可能已经移动。</p></div>
+      <details class="scope-details"><summary>这次演示的范围</summary><p id="dataset-limitations">只查询已录制并建立画面索引的录像。结果需要结合原视频确认。</p></details>
+    </aside>
+
+    <main id="main-content" class="main-content">
+      <section class="search-section" aria-labelledby="search-title">
+        <div class="section-eyebrow">有画面的记忆，才有依据</div>
+        <h1 id="search-title">东西上次在哪儿？</h1>
+        <p class="search-intro">说出你想找的物品，一起回到最近清楚看到它的那一刻。</p>
+        <form id="search-form" class="search-form" role="search">
+          <label class="sr-only" for="query">想找什么物品？</label>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.7"></circle><path d="m16 16 4.5 4.5"></path></svg>
+          <input id="query" name="query" type="search" placeholder="比如：钥匙最后在哪儿看到？" maxlength="240" autocomplete="off" required>
+          <button id="search-submit" class="button button-primary" type="submit"><span>查找线索</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="search-support"><div class="quick-questions"><span class="quick-label">试着问</span><button class="quick-question" type="button" data-query="钥匙最后在哪儿看到？">钥匙在哪儿？</button><button class="quick-question" type="button" data-query="钱包最后在哪儿看到？">钱包在哪儿？</button></div><span id="search-scope" class="search-scope">读取录像中</span></div>
+        <details id="analysis-panel" class="analysis-panel">
+          <summary><span>自动分析录像</span><span id="analysis-summary" class="analysis-summary">正在连接…</span></summary>
+          <div class="analysis-body">
+            <p class="analysis-disclosure">此分享包默认关闭自动分析。配置你自己的本机视觉服务后，才可主动提交已获授权的视频；示例图片和视频全部为合成数据。</p>
+            <div class="analysis-controls"><label class="sr-only" for="analysis-clip">选择要自动分析的录像</label><select id="analysis-clip" disabled><option value="">正在读取录像…</option></select><button id="analysis-start" class="button button-secondary" type="button" disabled>开始自动分析</button><button id="analysis-cancel" class="text-button" type="button" hidden>取消分析</button></div>
+            <details class="analysis-import"><summary>导入新录像</summary><div class="analysis-import-fields"><label for="analysis-file">选择 MOV 或 MP4，最长 5 分钟、最大 1 GiB</label><input id="analysis-file" type="file" accept=".mov,.mp4,video/quicktime,video/mp4"><label for="analysis-recorded-at">录像实际开始时间（本机时区）</label><input id="analysis-recorded-at" type="datetime-local" step="1"><p>请填写真正开始录像的时间，用于判断物品出现的先后顺序。</p><button id="analysis-import-start" class="button button-secondary" type="button" disabled>导入并自动分析</button></div></details>
+            <div id="analysis-progress-area" class="analysis-progress-area" hidden><div class="analysis-progress-heading"><span id="analysis-phase"></span><span id="analysis-percent"></span></div><progress id="analysis-progress" max="100" value="0" aria-label="自动分析进度"></progress><p id="analysis-counts" class="analysis-counts"></p></div>
+            <p id="analysis-message" class="analysis-message" role="status" aria-live="polite">正在读取自动分析状态。</p>
+            <p id="analysis-error" class="analysis-error" role="alert" hidden></p>
+            <button id="analysis-refresh" class="text-button" type="button" hidden>重新连接</button>
+          </div>
+        </details>
+      </section>
+
+      <div id="global-error" class="notice notice-error" role="alert" hidden><div><strong id="global-error-title">暂时无法读取</strong><p id="global-error-text"></p></div><button id="global-retry" class="button button-small" type="button">重新尝试</button></div>
+      <div id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+      <div class="results-layout">
+        <section class="answer-column" aria-label="查找结果">
+          <div id="loading-state" class="loading-state" hidden aria-label="正在查找画面"><div class="loading-label"><span class="spinner" aria-hidden="true"></span><span>正在翻看画面线索…</span></div><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-image"></div></div>
+          <div id="empty-state" class="empty-state" hidden><div class="empty-illustration" aria-hidden="true"><span class="empty-frame"></span><span class="empty-dot"></span></div><h2 id="empty-title">从一个物品开始</h2><p id="empty-message">输入“钥匙”或“钱包”，看看录像留下了什么线索。</p><div id="empty-actions" class="empty-actions"></div></div>
+          <div id="answer-content" hidden>
+            <div id="answer-tabs" class="answer-tabs" role="tablist" aria-label="物品结果" hidden></div>
+            <article class="answer-card" aria-labelledby="answer-headline">
+              <div class="answer-topline"><span class="answer-kicker"><span class="status-dot" aria-hidden="true"></span>最近清楚看到</span><span id="object-state" class="state-badge"></span></div>
+              <h2 id="answer-headline"></h2>
+              <p id="answer-description" class="answer-description"></p>
+              <div id="answer-meta" class="answer-meta"></div>
+              <div class="evidence-frame"><button id="primary-evidence" class="evidence-image-button" type="button" aria-label="播放这张画面对应的原视频"><img id="evidence-image" alt="" decoding="async"><span class="image-action"><span class="play-symbol" aria-hidden="true">▶</span>回到这一刻</span></button><div id="image-unavailable" class="image-unavailable" hidden>这张证据图暂时无法显示，仍可查看原视频。</div><button id="expand-evidence" class="expand-evidence" type="button" aria-label="放大证据图">放大画面 ↗</button></div>
+              <div class="evidence-caption"><span id="evidence-caption"></span><button id="view-evidence" class="text-button" type="button">查看原视频 <span aria-hidden="true">→</span></button></div>
+              <div id="answer-caveat" class="evidence-note"></div>
+              <div id="earlier-placement" class="earlier-placement" hidden><div><span class="small-label">较早放置记录</span><p id="placement-description"></p><span class="placement-warning">这条较早记录不能当作当前位置。</span></div><button id="view-placement" class="text-button" type="button">回看</button></div>
+              <div class="provenance"><span class="provenance-icon" aria-hidden="true">◇</span><span id="provenance-label">离线画面索引 · AI核验，待本人确认</span></div>
+            </article>
+
+            <section id="timeline-section" class="timeline-section" aria-labelledby="timeline-title"><div class="timeline-heading"><div><span class="section-eyebrow">把线索连起来</span><h2 id="timeline-title">相关画面与时刻</h2></div><span id="timeline-count" class="muted-small"></span></div><ol id="timeline" class="timeline"></ol></section>
+          </div>
+        </section>
+
+        <aside id="player-panel" class="player-panel" aria-labelledby="player-title">
+          <div class="player-heading"><div><span class="section-eyebrow">亲眼确认</span><h2 id="player-title">原视频</h2></div><span id="player-time" class="player-time">—</span></div>
+          <div class="video-stage"><video id="evidence-video" controls playsinline preload="metadata" aria-label="证据对应的原始录像" hidden></video><div id="player-placeholder" class="player-placeholder"><div class="player-outline" aria-hidden="true">▷</div><p>点击一条画面线索<br>回到原视频确认</p></div><div id="video-loading" class="video-loading" hidden><span class="spinner" aria-hidden="true"></span><span>正在载入原视频…</span></div></div>
+          <div id="player-info" class="player-info" hidden><div id="player-clip-label" class="player-clip-label"></div><p id="player-observation"></p><button id="replay-evidence" class="button button-secondary" type="button">从证据时刻播放 <span aria-hidden="true">↗</span></button></div>
+          <div id="player-error" class="player-error" role="alert" hidden><p id="player-error-text"></p><button id="retry-video" class="text-button" type="button">重新加载视频</button></div>
+          <p class="player-footnote">跳转时间对应这段原视频。看一看前后发生了什么，能更好地判断物品去向。</p>
+        </aside>
+      </div>
+      <footer class="page-footer"><span>RoboMemo · 第一版画面记忆演示</span><span id="dataset-summary">离线索引，原片可回看</span></footer>
+    </main>
+  </div>
+
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title">证据画面</h2><button id="close-image" class="dialog-close" type="button" aria-label="关闭放大画面">×</button></div><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+</body>
+</html>

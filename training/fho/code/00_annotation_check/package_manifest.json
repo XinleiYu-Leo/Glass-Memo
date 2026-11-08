@@ -1,0 +1,38 @@
+{
+  "schema": "robomemo-annotation-package-v1",
+  "no_training": true,
+  "no_network_requests": true,
+  "files": [
+    {
+      "path": "RoboMemo_check_annotations.ps1",
+      "sha256": "5e33992c18662e455bd61173827a10f6a5c2018ff4cc126bdfc069f7a8099956",
+      "bytes": 1894
+    },
+    {
+      "path": "audit_annotations.py",
+      "sha256": "9ed3455dcf31a8bb076625467425b5b1226d60417c8a3f4a3ac903b1f41e03c7",
+      "bytes": 31822
+    },
+    {
+      "path": "environment_probe.py",
+      "sha256": "86d77f14ce29654e18b06eb129fe35b60c2572db5b0ff3dee4847885cf98f5d3",
+      "bytes": 3338
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "03175d4845f839bdef346d89a061341d32b47911f55404ae264b403c34288c06",
+      "bytes": 4550
+    },
+    {
+      "path": "protocol/exclusion_policy.json",
+      "sha256": "02250507b503e570b346c7802ea98fc6ad8dd75043b1ad05e0b2c251a398a5f4",
+      "bytes": 150732
+    },
+    {
+      "path": "先看这里.txt",
+      "sha256": "88e3eeb9b95a628b18d1b8fe1744c05de25b2615951da440e76c3687a99c01a1",
+      "bytes": 1491
+    }
+  ],
+  "sanitized_for_sharing": "Explicit collaborator-supplied project/annotation paths; no owner-specific environment paths; manifest regenerated."
+}

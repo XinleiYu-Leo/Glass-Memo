@@ -1,0 +1,5 @@
+RoboMemo：放宽一条规则后的只读标注导出（v2）
+
+只读：不下载、不上传、不训练。统计在保留全部排除（官方验证/测试、旧实验来源）的前提下，
+去掉“片段必须在 LTA 训练名单里”这一条后，能多出多少可用动作与新视频。
+回传：<PROJECT>\candidate_exports_v2\export_*\RoboMemo_candidates_v2_return.zip

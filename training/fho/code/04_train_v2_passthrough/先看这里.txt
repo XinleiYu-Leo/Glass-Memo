@@ -1,0 +1,12 @@
+RoboMemo fho_transfer_v1：抽帧 → 特征 → 训练小分类头（一次运行）
+
+需要：<PROJECT>\fho_transfer_v1\selection（已解压的选片包）
+      <PROJECT>\fho_transfer_v1\downloads\v2\clips（已下载的 407 个片段）
+      WSL 里的 ffmpeg 和训练环境 <HOME>/robomemo-train-env
+
+做什么：每个窗口取最后 1.5 秒内 10 帧（只用决策时刻之前的帧），用冻结的 MobileNetV3-Small 提特征，
+训练 200/500/1000 三档的小分类头（逻辑回归、小 MLP；10 帧/4 帧/只看最后一帧），并与"全部猜是"、
+"像素运动量"两个简单方法比较。超参数事先固定；开发集只用来定阈值；检查集只打一次分。
+
+不做什么：不下载、不上传、不调用任何 API。Ego4D 画面只留在本机，回传 ZIP 里只有数字和小模型权重。
+local_only_contact_sheets 里的拼图只给你自己看，不要上传。

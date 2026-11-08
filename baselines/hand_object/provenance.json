@@ -1,0 +1,22 @@
+{
+  "schema": "100doh-share-provenance-v1",
+  "model": "100DOH handobj_100K",
+  "variant": "100K-only, not +ego",
+  "upstream_repository": "https://github.com/ddshan/hand_object_detector",
+  "upstream_commit": "e6eec712a498ec7844b97893c8d012cea1a71e09",
+  "source_subset_modified": false,
+  "license_file": "vendor/hand_object_detector/LICENSE",
+  "checkpoint_relative_path": "checkpoints/faster_rcnn_1_8_89999.pth",
+  "checkpoint_bytes": 378147662,
+  "checkpoint_sha256": "e7f57309da0536d4bb6c4cdf15ab53256790cf4486c6eef59cb8698a9c33bc43",
+  "mirror_url": "https://media.githubusercontent.com/media/ImperialCollegeLondon/MessagePassingFramework/825297bb9c8a20426ade07d3ab5b3310ed0a6210/tas_perception/hand_object/models/faster_rcnn_1_8_89999.pth",
+  "mirror_commit": "825297bb9c8a20426ade07d3ab5b3310ed0a6210",
+  "mirror_lfs_digest_verified": true,
+  "original_author_independent_digest_available": false,
+  "legacy_cuda_numerical_equivalence_verified": false,
+  "completion_predictor": false,
+  "contains_source_media": false,
+  "omitted_unused_upstream_files": [
+    "lib/model/utils/logger.py (unused training logger has upstream syntax error; not imported by inference)"
+  ]
+}

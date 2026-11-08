@@ -1,0 +1,58 @@
+{
+ "name": "logistic/n1652_logistic_last",
+ "head": "logistic",
+ "representation": "last",
+ "seeds": [
+  0
+ ],
+ "train_windows": 1652,
+ "train_positives": 826,
+ "train_parents": 316,
+ "source_run": "run_20261027_200303",
+ "source_weights_sha256": "8031d1d8558a8839586be3c7db1b7cefa71650aee020d5e5b4077a18efb59b83",
+ "train_config": {
+  "sizes": "all nested sizes found in the selection",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "logistic": {
+   "steps": 600,
+   "lr": 0.01,
+   "l2": 0.01
+  },
+  "mlp": {
+   "hidden": 64,
+   "steps": 300,
+   "lr": 0.001,
+   "l2": 0.01
+  },
+  "bootstrap": {
+   "resamples": 1000,
+   "seed": 7,
+   "unit": "canonical_parent"
+  }
+ },
+ "encoder": "torchvision mobilenet_v3_small, weights=MobileNet_V3_Small_Weights.IMAGENET1K_V1, frozen; features->avgpool->flatten (576-d)",
+ "input": "10 frames at decision_time-1.5 ... decision_time (evenly spaced, newest decoded frame with PTS<=target; reject if >0.10 s stale), letterbox to 224x224 (ffmpeg scale bilinear + pad colour #7c7468), RGB, ImageNet mean/std normalisation",
+ "label_policy": "fho_transfer_v1_draft3 (1 = take/put completed in the last 1.5 s; 0 = ongoing non-transfer hand action; weak labels from Ego4D FHO)",
+ "pooling": {
+  "pool10": "per-frame standardisation (frame_mu/frame_sd), then concat[mean_t, max_t, x_last-x_first, mean_t|x_t-x_{t-1}|] -> 2304, then rep standardisation (rep_mu/rep_sd)",
+  "pool4": "same as pool10 on frames [0,3,6,9]",
+  "last": "standardised last frame only (576)"
+ },
+ "eval_metrics_per_seed": {
+  "seed0": {
+   "ap": 0.5836367840351658,
+   "auc": 0.5909901036536748,
+   "balanced_accuracy": 0.571220862060879,
+   "recall": 0.6570048309178744,
+   "specificity": 0.4854368932038835,
+   "recall_take": 0.6495726495726496,
+   "recall_put": 0.6666666666666666,
+   "threshold_from_dev": 0.3733346079829093
+  }
+ },
+ "notes": "Logistic head (deterministic). Selection v2 nested training set; eval = selection v2 eval."
+}

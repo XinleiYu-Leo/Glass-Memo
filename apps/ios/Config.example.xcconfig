@@ -1,0 +1,10 @@
+// Copy to Config.local.xcconfig (ignored by Git), then edit your own values.
+// The blank team must be filled for installation on a physical iPhone.
+DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = org.example.robomemo
+ROBOMEMO_CALLBACK_SCHEME = org.example.robomemo
+// Use a unique bundle ID and URL scheme for your own development signing.
+// Keep Meta App ID 0 and Client Token empty for Developer Mode.
+// If using a configured Meta test channel, set that app's own values locally.
+META_APP_ID = 0
+CLIENT_TOKEN =

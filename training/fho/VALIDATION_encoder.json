@@ -1,0 +1,90 @@
+{
+  "schema": "robomemo-head-smoke-v1",
+  "status": "passed",
+  "inputs": "synthetic frames through actual frozen encoder",
+  "network_calls": 0,
+  "training_runs": 0,
+  "evaluated_real_dataset_accuracy": false,
+  "models": [
+    {
+      "name": "logistic/n1000_logistic_last",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n1000_logistic_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n1000_logistic_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n1652_logistic_last",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n1652_logistic_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n1652_logistic_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n200_logistic_last",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n200_logistic_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n200_logistic_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n500_logistic_last",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n500_logistic_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "logistic/n500_logistic_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "n1000_mlp_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "n1000_mlp_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "n1652_mlp_pool4",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    },
+    {
+      "name": "vision_main_n1652_mlp_pool10",
+      "synthetic_inference": "passed",
+      "matches_original_saved_tensors": true
+    }
+  ]
+}
