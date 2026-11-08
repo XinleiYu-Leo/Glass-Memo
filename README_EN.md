@@ -23,9 +23,9 @@ Open http://127.0.0.1:8787/. All included examples are fictional geometric scene
 | Separate weights, hashes and installation | [models/README.md](models/README.md) |
 | Pretrained hand/object baseline | [baselines/hand_object/README.md](baselines/hand_object/README.md) |
 
-The latest capture app records video, optional in-stream PCM audio, IMU and device-state changes. Empty-audio false alarms and the multisensor movie timeline have been corrected. IMU delivery can still pause for several seconds before buffered samples arrive. Do not claim stable real-time capture or calibrated sensor synchronization.
+The latest capture app records video, optional in-stream PCM audio, IMU and device-state changes. Empty-audio false alarms and the multisensor movie timeline have been corrected. IMU delivery can still pause for several seconds before buffered samples arrive. Real-time stability and sensor synchronization still need further validation.
 
-The frozen MobileNetV3-Small temporal classifier reaches roughly 0.74–0.75 AP on the current Ego4D weak-label evaluation. AP is not accuracy. Generalization to our glasses, a learned selector integrated with object QA, on-phone inference and energy measurements remain unfinished.
+Initial pick/place model training uses Ego4D human action annotations as weak labels, a frozen MobileNetV3-Small visual encoder, and a trained temporal classification head. Experiments compare frame counts, training-set sizes, and audio inputs. Next steps are validation on our own glasses recordings and integration of the learned selector with the object-finding demo. On-phone inference and energy measurements remain unfinished. Detailed results are in the training directory and current-status document.
 
 This is a sanitized collaboration snapshot, not a full experiment-data archive. Personal recordings, account state, device IDs, raw dataset assets, full labels and feature caches are excluded. Available saved project models are packaged separately; share them only as permitted by the applicable data and model terms. Missing experimental weights are documented rather than reconstructed. No real-dataset retraining or teacher inference was run during packaging; tests exercise synthetic fixtures and existing saved weights.
 
